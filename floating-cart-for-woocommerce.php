@@ -12,7 +12,6 @@
  * WC tested up to: 3.8
  * WC requires at least: 2.6
  *
- * Copyright: © 2020WooCommerce
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
