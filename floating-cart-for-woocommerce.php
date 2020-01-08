@@ -16,6 +16,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
  * Woo: 390890:911c438934af094c2b38d5560b9f50f3
+ * Copyright: © 2019 WooCommerce.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
