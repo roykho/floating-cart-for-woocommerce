@@ -3,7 +3,8 @@
  * Plugin Name: WooCommerce Bookings
  * Plugin URI: https://woocommerce.com/products/woocommerce-bookings/
  * Description: Setup bookable products such as for reservations, services and hires.
- * Version: 2.3.16
+ * Version: 2.3.17
+
 
  * Author: WooCommerce
  * Author URI: https://woocommerce.com
@@ -18,6 +19,7 @@
  *
  * Woo: 390890:911c438934af094c2b38d5560b9f50f3
  * Copyright: © 2020 WooCommerce
+
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -324,7 +326,8 @@ function woocommerce_bookings_init() {
 woothemes_queue_update( plugin_basename( __FILE__ ), '2b8029f0d7cdd1118f4d843eb3ab43ff', '184594' );
 
 if ( is_woocommerce_active() ) {
-	define( 'WC_BOOKINGS_VERSION', '2.3.15' );
+	define( 'WC_BOOKINGS_VERSION', '2.3.17' );
+
 
 	/**
 	 * Updates the plugin version to DB.
