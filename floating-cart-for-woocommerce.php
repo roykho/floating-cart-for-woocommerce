@@ -91,6 +91,7 @@ function woocommerce_bookings_activate() {
 if ( ! class_exists( 'WC_Bookings' ) ) :
 
 	define( 'WC_BOOKINGS_VERSION', '2.3.27' );
+        define( 'WC_BOOKINGS_MIN_VERSION', '3.0.0' );
 
 
 	define( 'WC_BOOKINGS_TEMPLATE_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/templates/' );
