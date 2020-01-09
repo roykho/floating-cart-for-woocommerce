@@ -3,13 +3,13 @@
  * Plugin Name: WooCommerce Bookings
  * Plugin URI: https://woocommerce.com/products/woocommerce-bookings/
  * Description: Setup bookable products such as for reservations, services and hires.
- * Version: 2.3.27
+ * Version: 2.3.28
  * Author: WooCommerce
  * Author URI: https://woocommerce.com
  * Text Domain: woocommerce-bookings
  * Domain Path: /languages
- * Tested up to: 1.23
- * WC tested up to: 2.26
+ * Tested up to: 1.32
+ * WC tested up to: 2.32
  * WC requires at least: 2.6
  *
  * License: GNU General Public License v3.0
@@ -90,7 +90,8 @@ function woocommerce_bookings_activate() {
 
 if ( ! class_exists( 'WC_Bookings' ) ) :
 
-	define( 'WC_BOOKINGS_VERSION', '2.3.27' );
+	define( 'WC_BOOKINGS_VERSION', '2.3.28' );
+
         define( 'WC_BOOKINGS_MIN_VERSION', '3.0.0' );
 
 
