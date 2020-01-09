@@ -1,6 +1,6 @@
 *** WooCommerce Floating Cart for WooCommerce Changelog ***
 
-2020-01-09 - version 4.3.2
+2020-01-09 - version 4.3.3
 * Tweak - WC 3.8 compatibility.
 
 2019-10-31 - version 1.15.4
