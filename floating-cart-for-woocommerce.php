@@ -46,8 +46,8 @@ function woocommerce_gateway_stripe_init() {
 		/**
 		 * Required minimums and constants
 		 */
+		// WRCS: DEFINED_VERSION.
 		define( 'WC_STRIPE_VERSION', '4.3.3' );
-
 		define( 'WC_STRIPE_MIN_PHP_VER', '5.6.0' );
 		define( 'WC_STRIPE_MIN_WC_VER', '2.6.0' );
 		define( 'WC_STRIPE_MAIN_FILE', __FILE__ );
