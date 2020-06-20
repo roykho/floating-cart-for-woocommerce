@@ -23,19 +23,6 @@ env:
 
 # Additional tests against stable PHP (min version is 7.0)
 # and code coverage report.
-jobs:
-  fast_finish: true
-  include:
-  - name: "E2E Tests"
-    php: 7.4
-    env: WP_VERSION=latest WP_MULTISITE=0 RUN_E2E=1
-    script:
-      - npm run build
-      - npm install jest --global
-      - npm run docker:up
-      - npm run test:e2e
-    after_script:
-      - npm run docker:down
 
 before_script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
