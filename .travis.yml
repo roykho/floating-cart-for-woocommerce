@@ -23,6 +23,24 @@ env:
 
 # Additional tests against stable PHP (min version is 7.0)
 # and code coverage report.
+jobs:
+  fast_finish: true
+  include:
+  - name: "E2E Tests"
+    php: 7.4
+    env: WP_VERSION=latest WP_MULTISITE=0 RUN_E2E=1
+    script:
+      - npm run build
+      - npm install jest --global
+      - npm run docker:up
+      - npm run test:e2e
+    after_script:
+      - npm run docker:down
+  - name: "Unit Tests"
+    php: 7.4
+    env: WP_VERSION=latest WP_MULTISITE=0
+    script:
+      - vendor/bin/phpunit
 
 before_script:
   - |
@@ -35,9 +53,6 @@ before_script:
   - nvm install 10
   - npm install
   - composer install --ignore-platform-reqs --no-interaction --prefer-source
-
-script:
-  - vendor/bin/phpunit
 
 # Specifies that Travis should create builds for master and release branches and also tags.
 branches:
