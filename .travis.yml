@@ -30,10 +30,9 @@ jobs:
     php: 7.4
     env: WP_VERSION=latest WP_MULTISITE=0 RUN_E2E=1
     script:
-      - npm run build:dev
       - npm install jest --global
       - npm run docker:up
-      - npm run test:e2e
+      - travis_retry npm run test:e2e
     after_script:
       - npm run docker:down
   - name: "Unit Tests"
@@ -52,7 +51,7 @@ before_script:
     fi
   - nvm install 10
   - npm install
-  - composer install --ignore-platform-reqs --no-interaction --prefer-source
+  - npm run build:dev
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
 
 # Specifies that Travis should create builds for master and release branches and also tags.
