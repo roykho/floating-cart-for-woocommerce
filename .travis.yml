@@ -24,18 +24,11 @@ env:
 # Additional tests against stable PHP (min version is 7.0)
 # and code coverage report.
 
-before_script:
-  - |
-    # Remove Xdebug for a huge performance increase:
-    if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
-      phpenv config-rm xdebug.ini
-    else
-      echo "xdebug.ini does not exist"
-    fi
-  - nvm install 10
-  - npm install
-  - composer install --no-dev
-  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+before_install:
+  - travis_retry composer self-update
+
+install:
+- travis_retry composer update --ignore-platform-reqs --no-interaction --prefer-source
 
 script:
   - vendor/bin/phpunit
