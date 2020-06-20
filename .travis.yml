@@ -34,7 +34,7 @@ before_script:
     fi
   - nvm install 10
   - npm install
-  - travis_retry composer install --ignore-platform-reqs --no-interaction --prefer-source
+  - composer install --ignore-platform-reqs --no-interaction --prefer-source
 
 script:
   - vendor/bin/phpunit
