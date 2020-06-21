@@ -39,7 +39,7 @@ jobs:
     php: 7.4
     env: WP_VERSION=latest WP_MULTISITE=0
     script:
-      - vendor/bin/phpunit
+      - npm run test:unit
 
 before_script:
   - |
