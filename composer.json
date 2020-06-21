@@ -3,7 +3,7 @@
     "description": "Mark items as deposit items which customers can then place deposits on, rather than paying in full.",
     "homepage": "https://woocommerce.com/products/woocommerce-deposits/",
     "type": "wordpress-plugin",
-    "license": "GPL-2.0+",
+    "license": "GPL-3.0-or-later",
     "archive": {
         "exclude": [
             "!/assets"
